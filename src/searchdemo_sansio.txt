@@ -2,7 +2,7 @@
 
 import fhir/r4
 
-import fhir/r4_rsvp
+//import fhir/r4_rsvp
 import fhir/r4_sansio
 import gleam/dynamic/decode
 import gleam/http/request.{type Request}
@@ -31,7 +31,7 @@ pub fn main() {
 // MODEL -----------------------------------------------------------------------
 
 type Model {
-  Model(client: r4_rsvp.FhirClient, show: PatOrMsg)
+  Model(client: r4_sansio.FhirClient, show: PatOrMsg)
 }
 
 type PatOrMsg {
